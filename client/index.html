@@ -1,0 +1,18 @@
+<body>
+{{ > lists }}
+</body>
+
+<template name="lists">
+    {{#if Template.subscriptionsReady}}
+        {{#each lists}}
+        <div>
+            {{id}}
+        </div>
+        {{/each}}
+    {{else}}
+        loading...
+    {{/if}}
+    <button id='clear'>clear</button>
+    <button id='larger'>larger</button>
+    <button id='small'>small</button>
+</template>
